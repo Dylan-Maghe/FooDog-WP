@@ -1,0 +1,29 @@
+/************************************************
+
+Stylesheet: Main CSS 
+Bouzouita David
+
+*************************************************/
+
+// FONTS 
+$font-crimson: 'Crimson Text', serif;
+$font-open: 'Open Sans', sans-serif;
+
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    a {
+        font-family: $font-open;
+    }
+    h1,h2,h3,h4,h5,p {
+        font-family: $font-crimson;
+    }
+}
+
+.tag {
+    font-family: $font-open;
+    color: orange;
+    text-align: center;
+    font-weight: 700;
+}

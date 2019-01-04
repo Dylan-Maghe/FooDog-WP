@@ -29,10 +29,10 @@
 	    <?php } ?>
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-
+		
 		<?php wp_head(); ?>
-
-	</head>
+		<link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i|Open+Sans:300,300i,400,400i,700,800" rel="stylesheet">
+		</head>
 			
 	<body <?php body_class(); ?>>
 
