@@ -1,0 +1,62 @@
+// COLORS
+$color-greyclear: #3A3E43;
+$color-greydark: #303336;
+$color-greytxt: #90959C;
+$color-orange: #FF8D6A;
+$color-whitegrey: #F2F2F2;
+
+// FONTS 
+$font-crimson: 'Crimson Text', serif;
+$font-open: 'Open Sans', sans-serif;
+
+
+// TITRE //
+.header {
+    .top {
+        a {
+            color: $color-greydark;
+            font-family: $font-crimson;
+            padding: 55px;
+        }
+    }
+}
+
+
+// NAVIGATION //
+.nav {
+    .menu {
+        a{
+            color: $color-greydark;
+            font-family: $font-open;
+            margin-bottom: 20px;
+        }
+    }
+}
+    // HOVER //
+.nav {
+    .menu {
+        a:hover {
+            color: $color-greytxt;
+        }
+    }
+}
+.menu .active>a {
+    background: transparent;
+}
+
+hr {
+    color: $color-whitegrey;
+}
+
+
+// ICONES // 
+.social-icones {
+    position: absolute;
+    right: 115px;
+
+    i {
+        color: $color-greydark;
+        position: fixed;
+        z-index: 1;
+    }
+} 
