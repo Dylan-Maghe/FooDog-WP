@@ -28,12 +28,53 @@ body {
     }
 }
 
-.tag {
-    font-family: $font-open;
-    color: orange;
-    text-align: center;
-    font-weight: 700;
+
+// SINGLE
+.main {
+
+    h2 {
+        text-align: center;
+        font-family: $font-open;
+        font-weight: 600;
+        color: $color-greydark;
+    }
+    p {
+        font-family: $font-crimson;
+        color: $color-greydark;
+        &.tag {
+            font-family: $font-open;
+            color: $color-orange;
+            text-align: center;
+            font-weight: 700;
+        }
+    }
+
+    h3,h4,h5,h6 {
+        font-family: $font-open;
+        font-weight: 600;
+    }
+    u {
+        text-decoration: none;
+        border-bottom: 4px solid $color-orange;
+    }
+
+    .banner {
+        margin: 40px 0;
+        border-top: 4px solid $color-whitegrey;
+        border-bottom: 4px solid $color-whitegrey;
+    }
+
+    .pagination {
+        &:first-child() {
+            border-right: 4px solid $color-whitegrey;
+        }
+        border-top: 4px solid $color-whitegrey;
+        border-bottom: 4px solid $color-whitegrey;
+    }
+
 }
+
+// SIDEBAR
 
 .social-icons {
     display: flex;
@@ -51,6 +92,9 @@ body {
         height: 50%;
         display: flow-root;
         margin: 3px;
+    &:hover {
+        transform: scale(1.2);
+    }
     }
 }
 
