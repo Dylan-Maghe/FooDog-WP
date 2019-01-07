@@ -40,14 +40,45 @@
 		<div class="off-canvas-wrapper">
 			
 			<!-- Load off-canvas container. Feel free to remove if not using. -->			
-			<?php get_template_part( 'parts/content', 'offcanvas' ); ?>
+			<?php // get_template_part( 'parts/content', 'offcanvas' ); ?>
 			
 			<div class="off-canvas-content" data-off-canvas-content>
 				
 				<header class="header" role="banner">
-							
-					 <!-- This navs will be applied to the topbar, above all content 
-						  To see additional nav styles, visit the /parts directory -->
-					 <?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
-	 	
+
+					<div class="top">
+						<ul class="menu align-center">
+						  <li><h1><a href=<?php echo get_home_url(); ?>><?php bloginfo('name'); ?></a></h1></li>
+						</ul>
+					</div>
+
+					<div class="social-icones" width="200">
+						<ul class="menu align-right">
+							<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+							<li><a data-toggle="exampleModal5" aria-controls="exampleModal5"><i class="fas fa-search"></i></a></li>
+								<div class="tiny reveal" id="exampleModal5" data-reveal>
+									<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+										<label>
+											<span class="screen-reader-text"><?php echo _x( 'Search for:', 'label', 'jointswp' ) ?></span>
+											<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search...', 'jointswp' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'jointswp' ) ?>" />
+										</label>
+										<input type="submit" class="search-submit button" value="<?php echo esc_attr_x( 'Search', 'jointswp' ) ?>" /> <!--ajoute le bouton dans le modal-->
+									</form>
+      							<button class="close-button" data-close aria-label="Close reveal" type="button">
+      								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+						</ul>
+					</div>
+
+					<div class="nav">
+					<ul id="menu-menu" class="menu align-center">
+						<?php wp_nav_menu();?>
+					</ul>
+					</div>
+
+					<hr>
+
 				</header> <!-- end .header -->

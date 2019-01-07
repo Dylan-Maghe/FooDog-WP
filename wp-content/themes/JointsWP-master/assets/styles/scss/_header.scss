@@ -1,0 +1,50 @@
+// TITRE //
+.header {
+    .top {
+        a {
+            color: $color-greydark;
+            font-family: $font-crimson;
+            padding: 55px;
+        }
+    }
+}
+
+// NAVIGATION //
+.nav {
+    .menu {
+        a{
+            color: $color-greydark;
+            font-family: $font-open;
+            margin-bottom: 20px;
+        }
+    }
+}
+    // HOVER //
+.nav {
+    .menu {
+        a:hover {
+            color: $color-greytxt;
+        }
+    }
+}
+.menu .active>a {
+    background: transparent;
+}
+
+hr {
+    color: $color-whitegrey;
+}
+
+
+// ICONES // 
+.social-icones {
+    position: fixed;
+    right: 40px;
+    top: 40px;
+
+    i {
+        color: $color-greydark;
+        position: fixed;
+        z-index: 1;
+    }
+} 
