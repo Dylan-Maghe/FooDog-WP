@@ -21,3 +21,54 @@
 	<?php comments_template(); ?>
 					
 </article> <!-- end article -->
+
+
+
+
+
+
+
+
+
+
+
+<?php
+	$recentPosts = new WP_Query();
+	
+	$sticky = get_option(‘sticky_posts’);
+	
+	$args = array(
+	
+	'offset' => 1,
+
+	'post_per_page' => 3,
+	
+	'post__in' => $sticky,
+	
+	'ignore_sticky_posts' => 1,
+	
+	'orderby' => 'date',
+	
+	);
+	
+	$recentPosts->query($args);
+
+	while ($recentPosts->have_posts()) : $recentPosts->the_post();
+	
+	?>
+
+	<div>
+	
+	<?php if ( has_post_thumbnail()) : ?>
+	
+	<h3><a href= »<?php the_permalink(); ?> » title= »<?php the_title_attribute(); ?> »><?php the_title(); ?></a></h3>
+	
+	<a href= »<?php the_permalink(); ?> » title= »<?php the_title_attribute(); ?> » ><?php the_post_thumbnail(‘large’); ?></a>
+	
+
+	
+	<?php endif; ?>
+	
+	</div>
+	
+	<?php endwhile; ?>

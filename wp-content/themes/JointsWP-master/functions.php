@@ -28,6 +28,9 @@ require_once(get_template_directory().'/functions/page-navi.php');
 // Adds support for multiple languages
 require_once(get_template_directory().'/functions/translation/translation.php'); 
 
+// Most popular post
+require_once(get_template_directory() . '/functions/popular-post.php');
+
 // Adds site styles to the WordPress editor
 // require_once(get_template_directory().'/functions/editor-styles.php'); 
 

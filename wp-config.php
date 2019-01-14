@@ -22,7 +22,7 @@
 define('DB_NAME', 'fooword');
 
 /** Utilisateur de la base de données MySQL. */
-define('DB_USER', 'root');
+define('DB_USER', 'dylan');
 
 /** Mot de passe de la base de données MySQL. */
 define('DB_PASSWORD', 'user');
