@@ -71,6 +71,7 @@
 								</button>
 							</div>
 						</ul>
+
 					</div>
 
 					<div class="nav">
@@ -78,7 +79,8 @@
 						<?php wp_nav_menu();?>
 					</ul>
 					</div>
-
 					<hr>
+
+
 
 				</header> <!-- end .header -->
