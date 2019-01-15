@@ -12,7 +12,6 @@ get_header(); ?>
 
 	<div class="content">
 		<div class="vertical medium-horizontal menu">
-	<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 	</div>
 		<div class="inner-content grid-x grid-margin-x grid-padding-x">
 	

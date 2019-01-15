@@ -1,0 +1,101 @@
+// SIDEBAR
+
+.social-icons {
+    display: flex;
+    font-size: 1em;
+    justify-content: space-around;
+    max-width: 40%;
+    margin: auto;
+    margin-bottom: 15px;
+    i {
+        width: 50%;
+        border-radius: 50%;
+        padding: 4%;
+        color: #fff;
+        background-color: $color-greyclear;
+        height: 50%;
+        display: flow-root;
+        margin: 3px;
+    &:hover {
+        transform: scale(1.2);
+    }
+    }
+}
+
+/**
+ * Circle Styles
+ */
+ .circle {
+    transform: rotate(-20deg);
+    position: relative;
+    display: block;
+    // margin: 2em 0;
+    background-color: transparent;
+    color: #222;
+    text-align: center;
+    // media queries
+    @include breakpoint(small) { display: none;}
+    @include breakpoint(medium) { display: none;}
+    @include breakpoint(large) { display: inherit;}
+  }
+  
+  .circle:after {
+    display: block;
+    padding-bottom: 100%;
+    width: 100%;
+    height: 0;
+    border-radius: 50%;
+    background-color: $color-orange;
+    content: "";
+  }
+  
+  .circle__inner {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .circle__wrapper {
+    display: table;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .circle__content {
+    display: table-cell;
+    // padding: 1em;
+    vertical-align: middle;
+    color: white;
+  }
+  
+#sidebar {
+    text-align: center;
+    
+    font-weight: 900;
+    .follow-us{
+        color: $color-greytxt;
+    }
+    .button {
+        margin-top: -1.4em;
+    }
+    footer {
+        font-family: $font-open;
+        justify-content: center;
+        text-align: center;
+        p {
+            color: $color-greytxt;
+        }
+        .tiket {
+            font-weight: 500;
+            .circle__content {
+                line-height: 1.4em;
+                font-size: 0.9em;
+            }
+        }
+    }
+}
+
+

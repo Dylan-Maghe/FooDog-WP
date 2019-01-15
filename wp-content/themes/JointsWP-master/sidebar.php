@@ -12,21 +12,21 @@
 	</div>
 	<figure>
 		<img src="<?php 
-		echo wp_get_attachment_url(92); ?> " alt="Chien">
+		echo wp_get_attachment_image_url(92, 'small'); ?> " alt="Chien">
 	</figure>
-	<a href="#" class="button">TRY NOW</a>
+	<a href="#" class="button">TRY NOW WITH HADRI</a>
 	<footer class="grid-x grid-margin-x">
 		<div class="cell large-4 tiket">
 <div class="circle">
   <div class="circle__inner">
     <div class="circle__wrapper">
-      <div class="circle__content">THE FARMER'S DOG</div>
+      <div class="circle__content">THE FARMER'S HADRI</div>
     </div>
   </div>
 </div><!-- end circle -->
 	</div>
 	<div class="cell large-8">
-	<p>REAL PET FOOD MADE FRESH DELIVERED <span><cite>Cute dog no included</cite></span> </p>
+	<p>REAL PET FOOD MADE HADRI FRESH DELIVERED <span><cite>Cute dog no included</cite></span> </p>
 	</div>
 </footer>
 </article>

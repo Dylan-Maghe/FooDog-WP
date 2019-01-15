@@ -1,8 +1,6 @@
 /************************************************
-
 Stylesheet: Main CSS 
 Bouzouita David
-
 *************************************************/
 // COLORS
 $color-greyclear: #3A3E43;
@@ -10,7 +8,6 @@ $color-greydark: #303336;
 $color-greytxt: #90959C;
 $color-orange: #FF8D6A;
 $color-whitegrey: #F2F2F2;
-
 
 // FONTS 
 $font-crimson: 'Crimson Text', serif;
@@ -30,6 +27,7 @@ body {
 
 
 // SINGLE
+
 .main {
 
     h2 {
@@ -39,7 +37,7 @@ body {
         color: $color-greydark;
     }
     p {
-        font-family: $font-crimson;
+        font-family: $font-open;
         color: $color-greydark;
         &.tag {
             font-family: $font-open;
@@ -48,14 +46,35 @@ body {
             font-weight: 700;
         }
     }
+    article {
+        a {
+            color: $color-greydark;
+            text-decoration: none;
+        }
+        .content {
+            a {
+                transition: all 0.3s;
+                color: $color-greydark;
+                text-decoration: none;
+                border-bottom: 2px solid $color-orange;
+                &:hover {
+                    color: black;
+                    padding: 3px;
+                }
+            }
+        }
+
+        img {
+            transition: all 1s;
+        &:hover {
+            opacity: 0.7;
+        }   
+        }
+    }
 
     h3,h4,h5,h6 {
         font-family: $font-open;
         font-weight: 600;
-    }
-    u {
-        text-decoration: none;
-        border-bottom: 4px solid $color-orange;
     }
 
     .banner {
@@ -72,111 +91,58 @@ body {
         border-bottom: 4px solid $color-whitegrey;
     }
 
-}
-
-// SIDEBAR
-
-.social-icons {
-    display: flex;
-    font-size: 1em;
-    justify-content: space-around;
-    max-width: 40%;
-    margin: auto;
-    margin-bottom: 15px;
-    i {
-        width: 50%;
-        border-radius: 50%;
-        padding: 4%;
-        color: #fff;
-        background-color: $color-greyclear;
-        height: 50%;
-        display: flow-root;
-        margin: 3px;
-    &:hover {
-        transform: scale(1.2);
-    }
-    }
-}
-
-/**
- * Circle Styles
- */
- .circle {
-    transform: rotate(-20deg);
-    position: relative;
-    display: block;
-    // margin: 2em 0;
-    background-color: transparent;
-    color: #222;
-    text-align: center;
-    // media queries
-    @include breakpoint(small) { display: none;}
-    @include breakpoint(medium) { display: none;}
-    @include breakpoint(large) { display: inherit;}
-  }
-  
-  .circle:after {
-    display: block;
-    padding-bottom: 100%;
-    width: 100%;
-    height: 0;
-    border-radius: 50%;
-    background-color: $color-orange;
-    content: "";
-  }
-  
-  .circle__inner {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .circle__wrapper {
-    display: table;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .circle__content {
-    display: table-cell;
-    // padding: 1em;
-    vertical-align: middle;
-    color: white;
-  }
-  
-#sidebar {
-    text-align: center;
-    
-    font-weight: 900;
-    .button {
-        margin-top: -1.4em;
-        padding: 10px 30px;
-        background-color: #FF8D6A;
-        &:hover {
-            background-color: #A15C46;
-        }
-    }
-    .follow-us{
-        color: $color-greytxt;
-    }
-    footer {
-        font-family: $font-open;
-        justify-content: center;
+    .newsletter {
         text-align: center;
-        p {
-            color: $color-greytxt;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        .input-group {
+            width: 80%;
         }
-        .tiket {
-            font-weight: 500;
-            .circle__content {
-                line-height: 1.4em;
-                font-size: 0.9em;
+    }
+
+    .comment-respond {
+        .comment-reply-title {
+            text-transform: uppercase;
+        }
+
+        .button {
+            transition: 0.4s all;
+            background-color: black;
+            &:hover {
+                background-color: $color-greyclear;
+
             }
+
+        }
+    }
+
+}
+
+.button {
+    padding: 10px 30px;
+    background-color: #FF8D6A;
+    &:hover {
+        background-color: #A15C46;
+    }
+}
+
+[type=color], [type=date], [type=datetime-local], [type=datetime], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=time], [type=url], [type=week], textarea {
+    border: 2px solid $color-whitegrey;
+    box-shadow: inherit;
+}
+
+body.single {
+    img {
+        &:hover {
+            opacity: inherit;
         }
     }
 }
 
-
+::placeholder {
+    font-size: 0.9rem;
+    font-family: $font-open;
+    color: $color-greydark;
+    opacity: 1;
+  }
