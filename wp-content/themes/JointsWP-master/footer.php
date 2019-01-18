@@ -11,10 +11,11 @@
 				<footer class="wrap">
 				<div class="grid-container">
 					<div class="grid-x grid-padding-x ">
+						<!--CATEGORIES-->
 						<div class=" categories cell large-4 medium-6"><h5>CATEGORIES</h5> 
 							<?php wp_nav_menu( array('footer-links'));?>
 						</div>
-
+						<!--POPOLAR POST-->
 						<div class=" popular cell large-4 medium-6"><h5>POPULAR POST</h5> 
 							<div class="grid-x grid-padding-x ">
 								
@@ -25,14 +26,10 @@
 										'limit' => 3
 											);
 
-										wpp_get_mostpopular( $args );?>
-								
-
-								
-							</div>
-							
+										wpp_get_mostpopular( $args );?>	
+							</div>	
 						</div>
-						
+						<!--INSTAGRAM-->
 						<div class="instagram cell large-4"><h5>INSTAGRAM</h5>
 							<p><img class="demo" src="http://localhost/FooDog-WP/wp-content/uploads/2019/01/photo-1518020382113-a7e8fc38eac9-1.jpeg">
 							<img class="demo" src="http://localhost/FooDog-WP/wp-content/uploads/2019/01/berkay-gumustekin-402114-unsplash.jpg">
@@ -47,6 +44,7 @@
 						
 					</div>	
 				</div>
+				<!--RESEAUX SOCIAUX-->
 				<div class="grid-x grid-padding-x">
 					<div class="reseaux cell large-12">
 						<div class="grid-container">
@@ -56,6 +54,7 @@
 							<li><a href="#"><i class="fab fa-instagram"></i></a></li>
 							</ul>	
 						</div>
+						<!--ARROW-->
 						<div style="text-align:right">
 							<i class="arrow fa fa-caret-up"></i>
 						</div>	
