@@ -1,4 +1,3 @@
-
 <?php
 /**
  * The main template file
@@ -10,24 +9,6 @@
 
 get_header(); ?>
 			
-			<?php
- $id = 1;
- $billet = get_post($id);
- $title = $billet->post_title;
- $date = $billet->post_date;
- $contenu = $billet->post_content;
- $contenu = apply_filters('the_content', $contenu);
- $contenu = str_replace(']]>', ']]&gt;', $contenu);
-?>
-
- <div id="billet">
- <?php echo "<h1>$title</h1><p>$contenu</p><strong>$date</strong>"; ?>
- </div>
-
-
-
-
-
 	<div class="content">
 	
 		<div class="inner-content grid-x grid-margin-x grid-padding-x">
