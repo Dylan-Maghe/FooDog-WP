@@ -14,7 +14,7 @@
 	</header> <!-- end article header -->
 					
 	<section class="entry-content" itemprop="text">
-		<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('full'); ?></a>
+		<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('medium'); ?></a>
 		<?php the_content('<button class="tiny">' . __( 'Read more...', 'jointswp' ) . '</button>'); ?>
 	</section> <!-- end article section -->
 						
