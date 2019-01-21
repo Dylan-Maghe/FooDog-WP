@@ -5,7 +5,6 @@
  * @package WordPress
  * @subpackage Taxonomy
  */
-
 /**
  * Retrieve list of category objects.
  *

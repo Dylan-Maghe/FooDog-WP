@@ -64,7 +64,7 @@ define('NONCE_SALT',       'bBj?]~TLRi<cq z`_3Z,/.z^0XL$mA(WQzsd@tA/FpwMgV#Q[,bt
  *
  * Vous pouvez installer plusieurs WordPress sur une seule base de données
  * si vous leur donnez chacune un préfixe unique.
- * N’utilisez que des chiffres, des lettres non-accentuées, et des caractères soulignés !
+ * N’utilisez que des chiffres, des lettres non-accentuées, et des caractères soulignés !
  */
 $table_prefix  = 'wp_';
 
@@ -93,4 +93,3 @@ if ( !defined('ABSPATH') )
 
 /** Réglage des variables de WordPress et de ses fichiers inclus. */
 require_once(ABSPATH . 'wp-settings.php');
-

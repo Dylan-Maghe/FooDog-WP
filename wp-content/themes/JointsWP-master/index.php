@@ -8,36 +8,26 @@
  */
 
 get_header(); ?>
+<div class="content">
 
+<div class="inner-content grid-x grid-margin-x grid-padding-x">
 
-	<div class="content">
-		<div class="vertical medium-horizontal menu">
-	</div>
-		<div class="inner-content grid-x grid-margin-x grid-padding-x">
+	<main class="main small-12 medium-8 large-12 cell" role="main">
 	
-		    <main class="main small-12 medium-8 large-8 cell" role="main">
-		    
-			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			 
-					<!-- To see additional archive styles, visit the /parts directory -->
-					<?php get_template_part( 'parts/loop', 'archive' ); ?>
-				    
-				<?php endwhile; ?>	
+			<?php get_template_part( 'parts/loop', 'jumbotron' ); ?>
 
-					<?php joints_page_navi(); ?>
-					
-				<?php else : ?>
-											
-					<?php get_template_part( 'parts/content', 'missing' ); ?>
-						
-				<?php endif; ?>
-																								
-		    </main> <!-- end #main -->
-		    
-		    <?php get_sidebar(); ?>
+	</main> <!-- end #main -->
 
-		</div> <!-- end #inner-content -->
+</div> <!-- end #inner-content -->
 
-	</div> <!-- end #content -->
+</div> <!-- end #content -->
+	<div class="grid-x">
+	<div class="cell large-9"></div>
+	<div class="cell large-3">
+		<?php get_sidebar(); ?>
+	</div>
+	</div><!-- end featured -->
 
 <?php get_footer(); ?>
+
+
