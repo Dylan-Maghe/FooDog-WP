@@ -18,9 +18,9 @@ get_header(); ?>
 
 
          
-			<!-- PARTIE FEATURED -->
+<!-- PARTIE FEATURED -->
 
-<!-- TITRE  -->
+		<!-- TITRE  -->
 	<div class="grid-x grid-padding-x"> <!-- Aligned to the left -->
 
 		<div class="cell padTitre medium-3 small-12 large-3">     
@@ -34,7 +34,7 @@ get_header(); ?>
 	</div>
 
 
-<!-- CONTENU -->
+		<!-- CONTENU -->
 
 <?php
 
@@ -80,7 +80,7 @@ $recentPosts->query($args);
 
 			</div>
 
-			<!-- FIN PARTIE FEATURED -->
+<!-- FIN PARTIE FEATURED -->
 
 																								
 		    </main> <!-- end #main -->

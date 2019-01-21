@@ -1,0 +1,148 @@
+// COLORS
+$color-greyclear: #3A3E43;
+$color-greydark: #303336;
+$color-greytxt: #90959C;
+$color-orange: #FF8D6A;
+$color-whitegrey: #F2F2F2;
+// FONTS 
+$font-crimson: 'Crimson Text', serif;
+$font-open: 'Open Sans', sans-serif;
+
+
+
+
+
+$topbar-center-logo-bg: white;
+
+
+
+a {
+  color: $color-greydark;
+  font-family: $font-crimson;
+}
+
+.topbar-center-logo {
+  background: $topbar-center-logo-bg;
+
+  .menu {
+    background: $topbar-center-logo-bg;
+
+  }
+}
+
+.topbar-center-logo .top-bar-center {
+  flex: 1 0 auto;
+
+  @include breakpoint(small only) {
+    display: none;
+  }
+}
+
+.topbar-center-logo-mobile {
+  background: $topbar-center-logo-bg;
+
+  .menu-icon {
+    vertical-align: text-top;
+  }
+}
+
+$subscription-form-bg: darken($primary-color, 20%);
+$subscription-form-color: $white;
+$subscription-form-padding: rem-calc(32);
+
+
+.simple-subscription-form {
+
+  color: $subscription-form-color;
+  padding: $subscription-form-padding;
+  border-radius: $global-radius;
+  font-family: $font-open;
+
+
+  .button {
+    margin-bottom: 0;
+    border-radius: 0 $global-radius $global-radius 0;
+    background-color: black;
+    font-weight: bold;
+    font-size: 12px;
+  }
+}
+
+.myNavbar {
+  .medium-horizontal {
+    display: inline-block;
+  }
+  p {
+    display: inline-block;
+    padding-right: 5px;
+  }
+  form {
+    display: inline-block;
+    input[type=email] {
+      display: inline-block;
+      height: 34.38px;
+      border: 2px solid black;
+    }
+    ::placeholder {
+      color: black;
+      opacity: 1;
+    }
+    button {
+      float: right;
+    }
+  }
+
+  .circle__content {
+    display: inline-block;
+  }
+  .top-bar-right {
+    display: inline-block;
+    
+    .menu .medium-horizontal {
+      display: inline-block;
+    }
+    li {
+      display: inline-block;
+      a {
+        display: inline-block;
+      }
+      .circle {
+        display: inline-block;
+        a{
+          display: inline-block;
+        }
+      }
+    }
+    .social-icones {
+      display: inline-block;
+      .menu {
+        display: inline-block;
+        li {
+          display: inline-block;
+          a {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.top-bar {
+  color: $color-greydark;
+  font-family: $font-crimson;
+/*     padding: 55px; */
+}
+
+.menuHamburger {
+  display: inline-block;
+}
+
+.hamburger {
+  width: 24px;
+  height: 2px;
+  background-color: black;
+  margin: 6px 0;
+}

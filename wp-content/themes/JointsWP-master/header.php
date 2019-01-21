@@ -37,20 +37,35 @@
 			
 	<body <?php body_class(); ?>>
 
-		<div class="off-canvas-wrapper">
+
 			
+			<!-- mobile nav bar -->
+<div class="title-bar topbar-center-logo-mobile" data-responsive-toggle="topbar-center-logo" data-hide-for="medium">
+  <div class="title-bar-left">
+		<div class="menuHamburger">
+				<a href="">
+					<div class="hamburger"></div>
+					<div class="hamburger"></div>
+					<div class="hamburger"></div>
+				</a>
+		</div>
+	</div>
+		<ul class="menu vertical medium-horizontal">
+  	  <li><h1><a href=<?php echo get_home_url(); ?>><?php bloginfo('name'); ?></a></h1></li>
+		</ul>
+  <div class="title-bar-right">
+    <button class="menu-icon" type="button" data-toggle="topbar-center-logo"></button>
+  </div>
+  
+</div>
+<!-- /mobile nav bar -->
+
 			<!-- Load off-canvas container. Feel free to remove if not using. -->			
 			<?php // get_template_part( 'parts/content', 'offcanvas' ); ?>
 			
 			<div class="off-canvas-content" data-off-canvas-content>
 				
 				<header class="header" role="banner">
-
-					<div class="top">
-						<ul class="menu align-center">
-						  <li><h1><a href=<?php echo get_home_url(); ?>><?php bloginfo('name'); ?></a></h1></li>
-						</ul>
-					</div>
 
 					<div class="social-icones" width="200">
 						<ul class="menu align-right">
@@ -64,15 +79,23 @@
 											<span class="screen-reader-text"><?php echo _x( 'Search for:', 'label', 'jointswp' ) ?></span>
 											<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search...', 'jointswp' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'jointswp' ) ?>" />
 										</label>
-										<input type="submit" class="search-submit button" value="<?php echo esc_attr_x( 'Search', 'jointswp' ) ?>" /> <!--ajoute le bouton dans le modal-->
+										<input type="submit" class="search-submit button" value="<?php echo esc_attr_x( 'Search', 'jointswp' ) ?>" /> <!--ajoute le bouton dans modal-->
 									</form>
       							<button class="close-button" data-close aria-label="Close reveal" type="button">
       								<span aria-hidden="true">&times;</span>
 								</button>
-							</div>
+								</div>
 						</ul>
 
 					</div>
+
+					<div class="top">
+						<ul class="menu align-center">
+						  <li><h1><a href=<?php echo get_home_url(); ?>><?php bloginfo('name'); ?></a></h1></li>
+						</ul>
+					</div>
+
+
 
 					<div class="nav">
 					<ul id="menu-menu" class="menu align-center">

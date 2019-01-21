@@ -9,6 +9,14 @@ $font-crimson: 'Crimson Text', serif;
 $font-open: 'Open Sans', sans-serif;
 
 
+
+@media only screen and (max-width: 600px) {
+    header {
+      display: none;
+    }
+  }
+
+
 // TITRE //
 .header {
     .top {
@@ -49,8 +57,11 @@ hr {
 
 // ICONES // 
 .social-icones {
+    position: absolute;
+    display: inline-block;
+    padding-top: 70px;
     right: 40px;
-    top: 40px;
+
 
     i {
         color: $color-greydark;
