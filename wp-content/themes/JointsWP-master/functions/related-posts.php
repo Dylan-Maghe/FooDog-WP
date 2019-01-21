@@ -15,15 +15,21 @@ function joints_related_posts() {
 		);
 		$related_posts = get_posts( $args );
 		if($related_posts) {
-		echo __( '<h4>Related Posts</h4>', 'jointswp' );
-		echo '<ul class="joints-related-posts">';
+		// echo __( '<h4>Related Posts</h4>', 'jointswp' );
+		
+		echo '<div class="joints-related-posts grid-x">';
 			foreach ( $related_posts as $post ) : setup_postdata( $post ); ?>
-				<li class="related_post">
-					<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-					<?php get_template_part( 'parts/content', 'byline' ); ?>
-				</li>
+				<div class="related_post cell large-4">
+					
+					<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
+						<figure>
+						<?php the_post_thumbnail( 'full' ); ?>
+						</figure>
+						<?php the_title(); ?>
+					</a>
+				</div>
 			<?php endforeach; }
 			}
 	wp_reset_postdata();
-	echo '</ul>';
+	echo '</div>';
 } /* end joints related posts function */

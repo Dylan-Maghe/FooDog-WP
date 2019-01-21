@@ -35,7 +35,7 @@ require_once(get_template_directory().'/functions/translation/translation.php');
 // require_once(get_template_directory().'/functions/disable-emoji.php'); 
 
 // Related post function - no need to rely on plugins
-// require_once(get_template_directory().'/functions/related-posts.php'); 
+require_once(get_template_directory().'/functions/related-posts.php'); 
 
 // Use this as a template for custom post types
 // require_once(get_template_directory().'/functions/custom-post-type.php');
@@ -46,6 +46,7 @@ require_once(get_template_directory().'/functions/translation/translation.php');
 // Customize the WordPress admin
 // require_once(get_template_directory().'/functions/admin.php'); 
 
+// Popular Posts
 function count_post_visits() {
     if( is_single() ) {
     global $post;
@@ -59,3 +60,54 @@ function count_post_visits() {
     }
    }
    add_action( 'wp_head', 'count_post_visits' );
+// /Popular Posts
+
+// COMMENT FORM
+    $commenter = wp_get_current_commenter();
+    $req = get_option( 'require_name_email' );
+    $aria_req = ( $req ? " aria-required='true'" : '' );
+
+$fields =  array(
+  
+  'author' =>
+    '<div class="cell large-4"><p class="comment-form-author"><label for="author">' . __( '', 'domainreference' ) .
+    ( $req ? '<span class="required"></span>' : '' ) . '</label>' .
+    '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+    '" size="30" placeholder="Name..."' . $aria_req . ' /></p></div>',
+
+  'email' =>
+    '<div class="cell large-4"><p class="comment-form-email"><label for="email">' . __( '', 'domainreference' ) .
+    ( $req ? '<span class="required"></span>' : '' ) . '</label>' .
+    '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+    '" size="30" placeholder="Email..."' . $aria_req . ' /></p></div>',
+
+  'url' =>
+    '<div class="cell large-4"><p class="comment-form-url"><label for="url">' . __( '', 'domainreference' ) . '</label>' .
+    '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
+    '" size="30" placeholder="Website..." /></p></div></div>',
+);
+
+
+$args = array(
+  'id_form'           => 'commentform',
+  'class_form'      => 'comment-form',
+  'id_submit'         => 'submit',
+  'class_submit'      => 'button',
+  'name_submit'       => 'submit',
+  'title_reply'       => __( 'LEAVE A RESPONSE' ),
+  'title_reply_to'    => __( ' to %s' ),
+  'cancel_reply_link' => __( 'Cancel Reply' ),
+  'label_submit'      => __( 'LEAVE A COMMENT' ),
+  'format'            => 'xhtml',
+  'comment_notes_before' => '',
+
+  'comment_field' =>  '<p class="comment-form-comment"><label for="comment">' . _x( '', 'noun' ) .
+    '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="Write your comment here...">' .
+    '</textarea></p><div class="grid-x grid-margin-x">',
+
+
+  'fields' => apply_filters( 'comment_form_default_fields', $fields ),
+);
+comments_template();
+get_comment(); 
+// /COMMENT FORM

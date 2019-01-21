@@ -43,7 +43,7 @@
 			<?php // get_template_part( 'parts/content', 'offcanvas' ); ?>
 			
 			<div class="off-canvas-content" data-off-canvas-content>
-				<?php instagram_api(); ?>
+
 				
 				<header class="header" role="banner">
 
