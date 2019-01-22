@@ -1,3 +1,4 @@
+
 <?php
 /**
  * The main template file
@@ -13,6 +14,10 @@ get_header(); ?>
 <div class="inner-content grid-x grid-margin-x grid-padding-x">
 
 	<main class="main small-12 medium-8 large-12 cell" role="main">
+
+	<div class="content">
+	
+		<div class="inner-content grid-x grid-margin-x grid-padding-x">
 	
 			<?php get_template_part( 'parts/loop', 'jumbotron' ); ?>
 

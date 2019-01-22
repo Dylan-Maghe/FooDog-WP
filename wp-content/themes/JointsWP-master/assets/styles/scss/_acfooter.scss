@@ -1,0 +1,122 @@
+$color-greyclear: #3A3E43;
+$color-greydark: #303336;
+$color-greytxt: #90959C;
+$color-orange: #FF8D6A;
+$color-whitegrey: #F2F2F2;
+
+$font-crimson: 'Crimson Text', serif;
+$font-open: 'Open Sans', sans-serif;
+
+//GENERAL
+footer.wrap{
+    background-color: $color-greyclear;
+    color: $color-greytxt;
+}    
+   footer.wrap{
+    padding: 70px 0 60px 0;
+    font-weight: bold;
+    padding-bottom: 0px;
+        h5{
+        color:$color-greytxt;
+        font-weight: bold;
+        margin-left: 25px;
+        font-family: $font-open;
+        }
+
+        a {
+            text-decoration: none;
+            list-style : none;
+            color: $color-whitegrey; 
+            font-size: 14px;   
+        }
+        .menu .active>a{
+            background-color: transparent;
+        }
+
+//CATEGORIES        
+        .categories ul#menu-footer.menu{
+            display: flex;
+            flex-direction: column;
+            li{
+                a{
+                border-bottom: solid 0,1px color $color-greytxt;
+                line-height: 40px;
+                }
+            }
+            li.menu-item-120{
+                a{
+                    border:none;
+                }
+            }
+            
+        }
+
+    }
+//POPULAR POST        
+        .popular{ 
+            .wpp-list li{
+            padding:10px;
+            }
+            a{
+                list-style : none;
+                line-height: 20px;
+            }     
+        }
+//INSTAGRAM            
+        .instagram{
+            margin-bottom: 20px;
+            p{ margin-bottom: 9px}
+            img.demo{
+                width: 110px;
+                height: 100px;
+                margin-right: 5px;
+                object-fit: cover; 
+                
+            }
+        }
+    
+
+//RESEAUX SOCIAUX    
+    .reseaux{
+        background: $color-greydark;
+        
+        
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            text-decoration: none;
+            list-style-type: none; 
+            padding-right: 40px;
+            height: 70px;
+            i{
+                margin-top:15px;
+                margin-bottom: 50px;
+                margin-right: 5px;
+                padding: 10px;
+                color: $color-whitegrey;
+                background: $color-greyclear;
+                border-radius: 50%;
+                
+            }
+        }   
+    }
+//ARROW
+ i.arrow{
+            display: flex;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background: $color-greyclear;
+            color: $color-greydark;
+            font-size: 2em;
+            margin-bottom: 20px;
+            float: right;
+        }       
+        
+
+        @media screen and (max-width: 39.9375em) {
+            footer.wrap {
+                text-align: center;
+            }  
+        }
