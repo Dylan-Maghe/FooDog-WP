@@ -18,11 +18,12 @@ get_header(); ?>
 
     $category = new WP_Query($categoryArgs);
 ?>
-
-    <div class="inner-content grid-x grid-padding-x grid-container ">
+    <div class="grid-x">
         <div class="title-container cell small-12 medium-12 large-12">
             <h1 class="main-title-category"><?php echo strtoupper($term->slug); ?></h1>
         </div>
+        <div class="cell large-9">
+    <div class="inner-content grid-x grid-padding-x grid-container ">
             <?php $i=0; while( $category->have_posts()): $category->the_post();?>    
             <div class="category-content cell small-12 medium-12 large-12" id= <?php echo $i ?>>
             <div class="category-post cell small-6 medium-6 large-6">
@@ -31,13 +32,13 @@ get_header(); ?>
                 </div>
         
                 <div class="right-category cell small-6 medium-6 large-6">
-                    <h2 class="current-category"><?php the_category(); ?></h2>
+                    <h2 class="current-category"><?php the_category();  ?></h2>
                     <h3 class="title-category"><a class= "title-category" href=<?php the_permalink(); ?> title= »<?php the_title_attribute(); ?> »><?php the_title(); ?></a></h3>
                     <?php the_excerpt() ?>
-                    <?php $i++; endif ?>
+                    <?php endif ?>
                 </div>
                 </div>
-		<?php endwhile; ?>
+        <?php $i++; endwhile; ?>
 	</div>
 	<div class="pagination-latest-post cell large-8">
 		<?php 
@@ -48,7 +49,12 @@ get_header(); ?>
 					));
 		?>
 	</div>
-			
+                </div>
+                
+    <div class="cell large-3">
+        <?php get_sidebar()?>
+    </div>
+    </div>			
 </div>
 
 <?php get_footer(); ?>

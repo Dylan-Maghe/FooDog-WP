@@ -14,16 +14,18 @@ get_header(); ?>
 
 	<main class="main small-12 medium-8 large-12 cell" role="main">
 	
-			<?php get_template_part( 'parts/loop', 'jumbotron' ); ?>
-
+			
 	</main> <!-- end #main -->
 
 </div> <!-- end #inner-content -->
 
 </div> <!-- end #content -->
+<?php get_template_part( 'parts/loop', 'jumbotron' ); ?>
 	<div class="grid-x">
-	<div class="cell large-9"></div>
-	<div class="cell large-3">
+		<div class="cell large-9">
+			<?php get_template_part( 'parts/loop', 'latest-post' ); ?>
+		</div>
+		<div class="cell large-3">
 		<?php get_sidebar(); ?>
 	</div>
 	</div><!-- end featured -->

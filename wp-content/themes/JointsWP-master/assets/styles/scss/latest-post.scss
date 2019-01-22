@@ -18,6 +18,9 @@ $font-open: 'Open Sans', sans-serif;
     font-weight: bold;
     color: $color-greydark;
     text-align: center;
+      :hover  {
+            color: black;
+        }
 }
 
 
@@ -102,6 +105,9 @@ $font-open: 'Open Sans', sans-serif;
     font-family: $font-open;
     font-weight: bold;
     color: $color-greydark;
+    :hover{
+        color: black;
+    }
 }
 
 .current-category ul {
@@ -143,7 +149,6 @@ $font-open: 'Open Sans', sans-serif;
         padding-top: 15px;
         margin-top: 15px;
         background: $color-whitegrey;
-        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -175,3 +180,4 @@ $font-open: 'Open Sans', sans-serif;
         display:flex;
         border-bottom: solid 1px $color-whitegrey;
     }
+

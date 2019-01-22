@@ -20,6 +20,9 @@ $font-open: 'Open Sans', sans-serif;
     font-family: $font-open;
     font-weight: bold;
     color: $color-greydark;
+    :hover {
+        color: black;
+    }
 }
 
 .title2 {
@@ -28,6 +31,9 @@ $font-open: 'Open Sans', sans-serif;
     font-family: $font-open;
     color: $color-greydark;
     padding-top: 10px;
+    :hover{
+        color: black;
+    }
 }
 
 .jumbotron-left {
@@ -51,6 +57,23 @@ $font-open: 'Open Sans', sans-serif;
         color: $color-orange;
     }
 }
+
+.img2-jumbotron {
+    img {
+        width: 222px;
+        height: 200px;
+        object-fit: cover;
+    }
+}
+
+.img-jumbotron {
+    img {
+        width: 637px;
+        height: 428px;
+        object-fit: cover;
+    }
+}
+
 
 
 @media screen and (max-width: 39.9375em) {
