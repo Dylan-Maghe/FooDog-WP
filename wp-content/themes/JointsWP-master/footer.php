@@ -19,7 +19,6 @@
 						<div class=" popular cell large-4 medium-6"><h5>POPULAR POST</h5> 
 							<div class="grid-x grid-padding-x ">
 								
-
 							</div>	
 						</div>
 						<!--INSTAGRAM-->
