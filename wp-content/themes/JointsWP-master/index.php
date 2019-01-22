@@ -22,7 +22,9 @@ get_header(); ?>
 
 </div> <!-- end #content -->
 	<div class="grid-x">
-	<div class="cell large-9"></div>
+	<div class="cell large-9">
+	<?php get_template_part( 'parts/loop', 'latest-post' ); ?>
+	</div>
 	<div class="cell large-3">
 		<?php get_sidebar(); ?>
 	</div>
