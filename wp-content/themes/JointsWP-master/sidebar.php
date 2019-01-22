@@ -12,7 +12,7 @@
 	</div>
 	<figure>
 		<img src="<?php 
-		echo wp_get_attachment_image_url(92, 'small'); ?> " alt="Chien">
+		echo wp_get_attachment_image_url(137, 'small'); ?> " alt="Chien">
 	</figure>
 	<a href="#" class="button">TRY NOW WITH DOG</a>
 	<footer class="grid-x grid-margin-x">

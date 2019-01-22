@@ -323,3 +323,290 @@ body.single {
         z-index: -1;
     }
 }
+
+
+
+
+
+
+
+
+
+
+ /**************
+ 
+ GARY*/
+// featured 
+
+// TITLE category //
+
+.cell.padTitre {
+    padding-left: 0px;
+}
+
+.cell.padLine {
+    padding-left: 0px;
+}
+
+.line {
+    border-bottom: 3px solid $color-whitegrey;
+    padding-top: 10px;
+    padding-left: 0px;
+}
+
+
+// CONTAINER contenu //
+
+.cell {
+    padding-top: 25px;
+    padding-bottom: 0px;
+
+}
+
+
+    // CATEGORY //
+
+ul.post-categories {
+    margin-left: 0px;
+}
+
+.category li {
+    list-style: none;
+    display: inline;
+
+    a {
+        // font-size: 12px;
+        color: $color-orange;
+    } 
+}  
+
+
+    // TITLE post//
+.title a {
+    color: $color-greydark;
+}
+
+
+
+    // PARAGRAPHE //
+p {
+    color: $color-greyclear;
+}
+
+
+    // ICONE SHARE //
+
+.fa-share:before  {
+    color: $color-greydark;
+    border-radius: 50% $color-greytxt;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    border: 1px solid $color-greytxt;
+    display: table-cell;
+    vertical-align: middle;
+    text-align:center;
+
+}
+i{
+    margin-right: 5px;
+}
+
+.share {
+    a {
+        display: flex;
+        color: $color-greytxt;
+        align-items: center;
+
+    }
+}
+
+// header single
+$topbar-center-logo-bg: white;
+
+
+
+a {
+  color: $color-greydark;
+  font-family: $font-crimson;
+}
+.top-bar-center form {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    p {
+        margin: 0;
+    }
+}
+
+
+.topbar-center-logo {
+  background: $topbar-center-logo-bg;
+
+  .menu {
+    background: $topbar-center-logo-bg;
+
+  }
+}
+
+.topbar-center-logo .top-bar-center {
+  flex: 1 0 auto;
+
+  @include breakpoint(small only) {
+    display: none;
+  }
+}
+
+.topbar-center-logo-mobile {
+  background: $topbar-center-logo-bg;
+
+  .menu-icon {
+    vertical-align: text-top;
+  }
+}
+
+$subscription-form-bg: darken($primary-color, 20%);
+$subscription-form-color: $white;
+$subscription-form-padding: rem-calc(32);
+
+
+.simple-subscription-form {
+
+  color: $subscription-form-color;
+  padding: $subscription-form-padding;
+  border-radius: $global-radius;
+  font-family: $font-open;
+
+
+  .button {
+    margin-bottom: 0;
+    border-radius: 0 $global-radius $global-radius 0;
+    background-color: black;
+    font-weight: bold;
+    font-size: 12px;
+  }
+}
+
+.myNavbar {
+    display: flex;
+    align-items: center;
+  .social-icones {
+    position: initial;
+  }  
+  .medium-horizontal {
+    display: inline-block;
+  }
+  p {
+    display: inline-block;
+    padding-right: 5px;
+  }
+  form {
+    display: flex;
+    margin: 0 auto;
+    input[type=email] {
+      display: inline-block;
+      height: 34.38px;
+      border: 2px solid black;
+    }
+    ::placeholder {
+      color: black;
+      opacity: 1;
+    }
+    button {
+      float: right;
+    }
+  }
+
+  .circle__content {
+    display: inline-block;
+  }
+  .top-bar-right {
+    display: inline-block;
+    
+    .menu .medium-horizontal {
+      display: inline-block;
+    }
+    li {
+      display: inline-block;
+      a {
+        display: inline-block;
+      }
+      .circle {
+        display: inline-block;
+        a{
+          display: inline-block;
+        }
+      }
+    }
+    .social-icones {
+      display: inline-block;
+      .menu {
+        display: inline-block;
+        li {
+          display: inline-block;
+          a {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.top-bar {
+  color: $color-greydark;
+  font-family: $font-crimson;
+/*     padding: 55px; */
+}
+
+.menuHamburger {
+  display: inline-block;
+}
+
+.hamburger {
+  width: 24px;
+  height: 2px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+.top-bar-right{
+  padding-bottom: 25px;
+}
+
+/* test estelle */
+
+
+
+body > div.off-canvas-wrapper > div > div.grid-x > div.cell.large-9 div:last-child() > hr {
+    display: none;
+}
+
+.category-content {
+    .cell {
+    padding-right: 50px;
+}
+}
+
+.img2-jumbotron {
+    img {
+    width: 222px;
+    height: 200px;
+    object-fit: cover;
+    }
+    }
+    
+    .img-jumbotron {
+    img {
+    width: 637px;
+    height: 428px;
+    object-fit: cover;
+    }
+}
+
+.img-featured-post img {
+    width: 357px;
+    height: 249px;
+    object-fit: cover;
+    }

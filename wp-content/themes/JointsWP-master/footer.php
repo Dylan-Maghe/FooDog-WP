@@ -5,33 +5,63 @@
  * Comtains closing divs for header.php.
  *
  * For more info: https://developer.wordpress.org/themes/basics/template-files/#template-partials
- */			
+ */		
+	
  ?>
+ <?php
+	
+	$popular_posts_args = array(
+	'meta_key' => 'my_post_viewed',
+ 	'orderby' => 'meta_value_num',
+ 	'order'=> 'DESC'
+	);
+ 
+	$popular_posts_loop = new WP_Query( $popular_posts_args );	
+	
+	?>	
 					
 				<footer class="wrap">
 				<div class="grid-container">
 					<div class="grid-x grid-padding-x ">
 						<!--CATEGORIES-->
-						<div class=" categories cell large-4 medium-6"><h5>CATEGORIES</h5> 
+						<div class="categories cell large-4 medium-6"><h5>CATEGORIES</h5> 
 							<?php wp_nav_menu( array('footer-links'));?>
 						</div>
 						<!--POPOLAR POST-->
 						<div class=" popular cell large-4 medium-6"><h5>POPULAR POST</h5> 
 							<div class="grid-x grid-padding-x ">
 								
+							<?php $i = 0; while( $popular_posts_loop->have_posts() && $i < 3 ): $popular_posts_loop->the_post(); ?>
+				<div class="cell grid-x small-12 medium-12 large-12">
+					<div class="cell large-3">
+					<?php if ( has_post_thumbnail()) : ?>
+					
+					
+					<div class="cell large-9">
+					<a class="img-jumbotron" href=<?php the_permalink(); ?> title= »<?php the_title_attribute(); ?> » ><?php the_post_thumbnail('large'); ?></a>
+					</div>
+					<h3 class="title"><a class= "title" href=<?php the_permalink(); ?> title= »<?php the_title_attribute(); ?> »><?php the_title(); ?></a></h3>
+					</div>
+					<?php endif ?>
+					</div>
+			    <?php $i++; endwhile; ?>
+
+
+
 							</div>	
 						</div>
 						<!--INSTAGRAM-->
 						<div class="instagram cell large-4"><h5>INSTAGRAM</h5>
-							<!-- <p><img class="demo" src="http://localhost/FooDog-WP/wp-content/uploads/2019/01/photo-1518020382113-a7e8fc38eac9-1.jpeg">
-							<img class="demo" src="http://localhost/FooDog-WP/wp-content/uploads/2019/01/berkay-gumustekin-402114-unsplash.jpg">
-							<img class="demo" src="http://localhost/FooDog-WP/wp-content/uploads/2019/01/photo-1534628526458-a8de087b1123.jpeg"></p>
-							<p><img class="demo" src="http://localhost/FooDog-WP/wp-content/uploads/2019/01/elena-taranenko-973157-unsplash.jpg">
-							<img class="demo" src="http://localhost/FooDog-WP/wp-content/uploads/2019/01/adorable-animals-canine-160829.jpg">
-							<img class="demo" src="http://localhost/FooDog-WP/wp-content/uploads/2019/01/photo-1510771463146-e89e6e86560e.jpeg"></p>
-							<p><img class="demo" src="http://localhost/FooDog-WP/wp-content/uploads/2019/01/photo-1534949842529-5172a66135b9.jpeg">
-							<img class="demo" src="http://localhost/FooDog-WP/wp-content/uploads/2019/01/photo-1536677412572-c277de11e458.jpeg">
-							<img class="demo" src="http://localhost/FooDog-WP/wp-content/uploads/2019/01/photo-1516131537578-9ca049cc6b59.jpeg"></p> -->
+							<p>
+								<img class="demo" src="http://192.168.64.3/FooDog-WP/wp-content/uploads/2019/01/charles-deluvio-547196-unsplash.jpg">
+							<img class="demo" src="http://192.168.64.3/FooDog-WP/wp-content/uploads/2019/01/charles-deluvio-547196-unsplash.jpg">
+							<img class="demo" src="http://192.168.64.3/FooDog-WP/wp-content/uploads/2019/01/charles-deluvio-547196-unsplash.jpg"></p>
+							<p><img class="demo" src="http://192.168.64.3/FooDog-WP/wp-content/uploads/2019/01/charles-deluvio-547196-unsplash.jpg">
+							<img class="demo" src="http://192.168.64.3/FooDog-WP/wp-content/uploads/2019/01/charles-deluvio-547196-unsplash.jpg">
+							<img class="demo" src="http://192.168.64.3/FooDog-WP/wp-content/uploads/2019/01/charles-deluvio-547196-unsplash.jpg"></p>
+							<p><img class="demo" src="http://192.168.64.3/FooDog-WP/wp-content/uploads/2019/01/charles-deluvio-547196-unsplash.jpg">
+							<img class="demo" src="http://192.168.64.3/FooDog-WP/wp-content/uploads/2019/01/charles-deluvio-547196-unsplash.jpg">
+							<img class="demo" src="http://192.168.64.3/FooDog-WP/wp-content/uploads/2019/01/charles-deluvio-547196-unsplash.jpg"></p>
 						</div>
 						
 					</div>	

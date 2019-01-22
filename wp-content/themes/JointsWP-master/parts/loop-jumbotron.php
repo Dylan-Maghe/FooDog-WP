@@ -17,7 +17,7 @@
 			    <?php $i = 0; while( $popular_posts_loop->have_posts() && $i < 1 ): $popular_posts_loop->the_post(); ?>
 				<div class="jumbotron-left cell small-12 medium-6 large-6">
 					<?php if ( has_post_thumbnail()) : ?>
-					<a href=<?php the_permalink(); ?> title= »<?php the_title_attribute(); ?> » ><?php the_post_thumbnail('large'); ?></a>
+					<a class="img-jumbotron" href=<?php the_permalink(); ?> title= »<?php the_title_attribute(); ?> » ><?php the_post_thumbnail('large'); ?></a>
 					<h2 class="category-dylan"><?php the_category(); ?></h2>
 					<h3 class="title"><a class= "title" href=<?php the_permalink(); ?> title= »<?php the_title_attribute(); ?> »><?php the_title(); ?></a></h3>
 					<?php endif ?>
@@ -28,7 +28,7 @@
 				<?php $i = 0; while ($popular_posts_loop->have_posts() && $i < 4) : $popular_posts_loop->the_post(); ?>	
 				<article class="article-dylan cell  small-6 large-6">
 					<?php if ( has_post_thumbnail()) : ?>
-					<a href=<?php the_permalink(); ?> title= »<?php the_title_attribute(); ?> » ><?php the_post_thumbnail('large'); ?></a>
+					<a class="img2-jumbotron" href=<?php the_permalink(); ?> title= »<?php the_title_attribute(); ?> » ><?php the_post_thumbnail('large'); ?></a>
 					<h3 class="title2"><a class= "title2" href=<?php the_permalink(); ?> title= »<?php the_title_attribute(); ?> »><?php the_title(); ?></a></h3>
 					<?php endif ?>
 				</article>

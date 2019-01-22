@@ -11,6 +11,7 @@
 
 	$latestPosts = new WP_Query($latestPosts_args);
 ?>
+<h5 class="titleliner">LATEST POSTS</h5>
 <div class="inner-content grid-x grid-padding-x grid-container ">
 	
 	<div class="grid-x grid-padding-x cell large-8">
