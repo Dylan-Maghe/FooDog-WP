@@ -8,8 +8,7 @@
  */
 
 get_header(); ?>
-
-
+<?php get_template_part("parts/loop", "jumbotron");?>
 <?php get_footer(); ?>
 
 
