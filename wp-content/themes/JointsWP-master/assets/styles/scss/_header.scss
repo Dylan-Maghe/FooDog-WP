@@ -1,3 +1,22 @@
+// COLORS
+$color-greyclear: #3A3E43;
+$color-greydark: #303336;
+$color-greytxt: #90959C;
+$color-orange: #FF8D6A;
+$color-whitegrey: #F2F2F2;
+// FONTS 
+$font-crimson: 'Crimson Text', serif;
+$font-open: 'Open Sans', sans-serif;
+
+
+
+@media only screen and (max-width: 600px) {
+    header {
+      display: none;
+    }
+  }
+
+
 // TITRE //
 .header {
     .top {
@@ -38,14 +57,13 @@ hr {
 
 // ICONES // 
 .social-icones {
-    position: fixed;
+    position: absolute;
+    display: inline-block;
     right: 40px;
-    top: 40px;
+
 
     i {
         color: $color-greydark;
-        position: fixed;
         z-index: 1;
     }
 } 
-

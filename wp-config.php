@@ -22,10 +22,17 @@
 define('DB_NAME', 'fooword');
 
 /** Utilisateur de la base de données MySQL. */
+<<<<<<< HEAD
 define('DB_USER', 'dylan');
 
 /** Mot de passe de la base de données MySQL. */
 define('DB_PASSWORD', 'user');
+=======
+define('DB_USER', 'gary');
+
+/** Mot de passe de la base de données MySQL. */
+define('DB_PASSWORD', 'User_pw15');
+>>>>>>> gary
 
 /** Adresse de l’hébergement MySQL. */
 define('DB_HOST', 'localhost');
