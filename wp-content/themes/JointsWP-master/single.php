@@ -86,7 +86,25 @@
   </form>
 	</div>
 <!-- NAV SEARCH -->
-  </div>
+	</div>
+	<div class="social-icones" width="200">
+		<ul class="menu align-right">
+			<li><a data-toggle="exampleModal5" aria-controls="exampleModal5"><i class="fas fa-search"></i></a></li>
+				<div class="tiny reveal" id="exampleModal5" data-reveal>
+					<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+						<label>
+							<span class="screen-reader-text"><?php echo _x( 'Search for:', 'label', 'jointswp' ) ?></span>
+							<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search...', 'jointswp' ) ?>" value="<?php echo get_search_quer?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'jointswp' ) ?>" />
+						</label>
+						<input type="submit" class="search-submit button" value="<?php echo esc_attr_x( 'Search', 'jointswp' ) ?>" /> <!--ajoute le bouton dans le modal-->
+					</form>
+    				<button class="close-button" data-close aria-label="Close reveal" type="button">
+    					<span aria-hidden="true">&times;</span>
+						</button>
+			</div>
+		</ul>
+
+		</div>
   <div class="top-bar-right">
     <ul class="menu vertical medium-horizontal">
     	<li><a href="#"><div class="circle">
@@ -95,24 +113,7 @@
       <div class="circle__content">THE FARMER'S DOG</div>
     </div>
   </div></a></li>
-    	<div class="social-icones" width="200">
-						<ul class="menu align-right">
-							<li><a data-toggle="exampleModal5" aria-controls="exampleModal5"><i class="fas fa-search"></i></a></li>
-								<div class="tiny reveal" id="exampleModal5" data-reveal>
-									<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
-										<label>
-											<span class="screen-reader-text"><?php echo _x( 'Search for:', 'label', 'jointswp' ) ?></span>
-											<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search...', 'jointswp' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'jointswp' ) ?>" />
-										</label>
-										<input type="submit" class="search-submit button" value="<?php echo esc_attr_x( 'Search', 'jointswp' ) ?>" /> <!--ajoute le bouton dans le modal-->
-									</form>
-      							<button class="close-button" data-close aria-label="Close reveal" type="button">
-      								<span aria-hidden="true">&times;</span>
-										</button>
-							</div>
-						</ul>
-
-			</div>
+    	
     </ul>
   </div>
 </div>

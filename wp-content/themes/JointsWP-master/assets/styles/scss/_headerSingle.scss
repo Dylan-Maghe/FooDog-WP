@@ -129,7 +129,6 @@ $subscription-form-padding: rem-calc(32);
 }
 
 
-
 .top-bar {
   color: $color-greydark;
   font-family: $font-crimson;
@@ -145,4 +144,8 @@ $subscription-form-padding: rem-calc(32);
   height: 2px;
   background-color: black;
   margin: 6px 0;
+}
+
+.top-bar-right{
+  padding-bottom: 25px;
 }
