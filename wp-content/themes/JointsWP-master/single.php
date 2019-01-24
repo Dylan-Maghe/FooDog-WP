@@ -41,7 +41,7 @@
 /* get_header();  */?>
 
 <!-- mobile nav bar -->
-<div class="title-bar topbar-center-logo-mobile" data-responsive-toggle="topbar-center-logo" data-hide-for="medium">
+<!-- <div class="title-bar topbar-center-logo-mobile" data-responsive-toggle="topbar-center-logo" data-hide-for="medium">
   <div class="title-bar-left">
 		<div class="menuHamburger">
 				<a href="">
@@ -57,7 +57,7 @@
   <div class="title-bar-right">
     <button class="menu-icon" type="button" data-toggle="topbar-center-logo"></button>
   </div>
-</div>
+</div> -->
 <!-- /mobile nav bar -->
 
 <!-- medium and larger nav bar -->

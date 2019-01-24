@@ -610,3 +610,11 @@ body > div.off-canvas-wrapper > div > div.grid-x > div.cell.large-9 div:last-chi
     height: 249px;
     object-fit: cover;
     }
+
+.cat-cell {
+    padding: 0;
+    img {
+        max-height: 72px;
+        object-fit: cover;
+    }
+}

@@ -32,14 +32,15 @@
 							<div class="grid-x grid-padding-x ">
 								
 							<?php $i = 0; while( $popular_posts_loop->have_posts() && $i < 3 ): $popular_posts_loop->the_post(); ?>
-				<div class="cell grid-x small-12 medium-12 large-12">
-					<div class="cell large-3">
+				<div class="cat-cell cell grid-x small-12 medium-12 large-12">
+					<div class="cell large-6">
 					<?php if ( has_post_thumbnail()) : ?>
 					
 					
-					<div class="cell large-9">
-					<a class="img-jumbotron" href=<?php the_permalink(); ?> title= »<?php the_title_attribute(); ?> » ><?php the_post_thumbnail('large'); ?></a>
+					
+					<a class="img-jumbotron" href=<?php the_permalink(); ?> title= »<?php the_title_attribute(); ?> » ><?php the_post_thumbnail('thumbnail'); ?></a>
 					</div>
+					<div class="cell large-6">
 					<h3 class="title"><a class= "title" href=<?php the_permalink(); ?> title= »<?php the_title_attribute(); ?> »><?php the_title(); ?></a></h3>
 					</div>
 					<?php endif ?>
