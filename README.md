@@ -1,5 +1,5 @@
 ## FooDog
-### Site fictif d'alimentation pour chien
+### Wordpress blog for fictive alimentation dog 
 
 #### Team
 - David Bouzouita
