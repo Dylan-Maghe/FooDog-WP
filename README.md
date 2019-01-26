@@ -5,7 +5,8 @@
 - David Bouzouita
 - [Gary Petrovski](https://github.com/GaryPetrovski)
 - [Dylan Maghe](https://github.com/Dylan-Maghe)
-- [Anne Cécile](https://github.com/AnneCecileRiquet) 
+- [Anne Cécile](https://github.com/AnneCecileRiquet)
+> Thank's team for this challenge good time passed with you, pleasure and sharing experience.
 
 ## Challenge description
 Make a Wordpress Template for fictif blog alimentation for dog. Follow instruction and layout imposed.
